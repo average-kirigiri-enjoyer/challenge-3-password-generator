@@ -82,8 +82,10 @@ function writePassword()
     return
   }
 
+  //replaces content of password text box with generated password, and changes button text
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
+  generatePassBtn.innerHTML = "Regenerate Password";
 }
 
 // Get references to the #generate-password-button element

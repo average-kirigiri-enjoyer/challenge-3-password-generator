@@ -5,11 +5,13 @@ Created 2023/07/22
 Last Edited 2023/07/23   
 */
 
+/* sets padding & border properties to be included in element size */
 *, *::before, *::after
 {
   box-sizing: border-box;
 }
 
+/* sets height, padding, and margin for all page content */
 html, body, .password-generator-content
 {
   height: 100%;
@@ -17,12 +19,14 @@ html, body, .password-generator-content
   padding: 0;
 }
 
+/* sets font and background colour for page content */
 body
 {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
 
+/* sets padding for password generator content */
 .password-generator-content
 {
   padding-top: 30px;
@@ -30,6 +34,7 @@ body
   padding-right: 20px;
 }
 
+/* defines display settings for password generator header */
 header
 {
   text-align: center;
@@ -38,6 +43,7 @@ header
   color: hsl(206, 17%, 28%);
 }
 
+/* defines display settings for password generation content box */
 .card
 {
   background-color: hsl(0, 0%, 100%);
@@ -51,6 +57,7 @@ header
   padding: 30px 40px;
 }
 
+/* creates a thin grey horizontal line above the password text box */
 .card-header::after
 {
   content: " ";
@@ -60,16 +67,19 @@ header
   height: 2px;
 }
 
+/* sets a minimum height for password generation content box */
 .card-body
 {
   min-height: 100px;
 }
 
+/* aligns generate password button with the center of the content box */
 .card-footer
 {
   text-align: center;
 }
 
+/* creates a thin grey horizontal line below the password text box */
 .card-footer::before
 {
   content: " ";
@@ -79,6 +89,7 @@ header
   height: 2px;
 }
 
+/*  */
 .card-footer::after
 {
   content: " ";
@@ -86,13 +97,13 @@ header
   clear: both;
 }
 
+/*  */
 .btn
 {
   border: none;
   background-color: hsl(360, 91%, 36%);
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
   color: hsl(0, 0%, 100%);
   display: inline-block;
   font-size: 22px;
@@ -103,17 +114,26 @@ header
   cursor: pointer;
 }
 
+.btn:hover
+{
+  background-color: #dd7799;
+  transition: 0.25s;
+}
+
+/*  */
 button[disabled]
 {
   cursor: default;
   background: #c0c7cf;
 }
 
+/*  */
 .float-right
 {
   float: right;
 }
 
+/*  */
 #password
 {
   -webkit-appearance: none;
@@ -136,6 +156,7 @@ button[disabled]
   overflow: hidden;
 }
 
+/*  */
 @media (max-width: 690px)
 {
   .btn {
@@ -149,6 +170,7 @@ button[disabled]
   }
 }
 
+/*  */
 @media (max-width: 500px)
 {
   .btn
