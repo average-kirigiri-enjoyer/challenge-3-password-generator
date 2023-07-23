@@ -9,7 +9,7 @@ Last Edited 2023/07/23
 function generatePassword()
 {
   //prompts user to input desired password length
-  var userLengthInput= prompt("Please enter desired password length between & including 8-128 (non-integers will be rounded down)", "Password Length");
+  var userLengthInput = prompt("Please enter desired password length between & including 8-128 (non-integers will be rounded down)", "Password Length");
   
   //if the user did not input a number, exits function and tells user to try again
   if (isNaN(parseInt(userLengthInput)))
@@ -33,7 +33,7 @@ function generatePassword()
   var includeNumbers = confirm("Include numbers in password?");
   var includeSpecial = confirm("Include special characters in password?");
 
-  //lowercase, uppercase, numbers, and special characters are added to array based on above user input
+  //lowercase, uppercase, numbers, and special characters are added to password character pool based on the user's input above
   var passwordCharacterPool = [];
 
   if (includeLowerCase)
@@ -60,20 +60,29 @@ function generatePassword()
     return;
   }
 
-  console.log(passwordCharacterPool);
+  //generates a random number to pick a character from the pool, adds it to password, and repeats until number of characters matches length requested by user
+  var password = "";
 
-  //for loop generates a random number, uses it to pick out an item from the above array, and adds it to password
-  //for loop iterates for the length of the password that the user inputted
+  for (character = 0; character < passLength; character++)
+  {
+    password = password.concat(passwordCharacterPool[Math.floor(Math.random() * passwordCharacterPool.length)]);
+  }
 
-  //password is written to the page where it previously states "your secure password"
+  return password
 }
 
-//
+//attempts to generate password
 function writePassword()
 {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
+  //if a password was not successfully generated, exit function without updating password text box
+  if (!password)
+  {
+    return
+  }
+
+  var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
 
@@ -81,4 +90,4 @@ function writePassword()
 var generatePassBtn = document.getElementById("generate-password-button");
 
 // Add event listener to generate button
-generatePassBtn.addEventListener("click", generatePassword);
+generatePassBtn.addEventListener("click", writePassword);
