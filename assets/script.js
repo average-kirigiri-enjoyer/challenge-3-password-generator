@@ -7,13 +7,10 @@ Last Edited 2023/07/23
 
 // Assignment code here
 
-function generatePassword();
+function generatePassword()
 {
   passLength = prompt("Please enter desired password length (between & including 8-128)", "Password Length");
 }
-
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate-password-button");
 
 // Write password to the #password input
 function writePassword()
@@ -24,5 +21,13 @@ function writePassword()
   passwordText.value = password;
 }
 
+function test()
+{
+  alert("test");
+}
+
+// Get references to the #generate-password-button element
+var generatePassBtn = document.getElementById("generate-password-button");
+
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generatePassBtn.addEventListener("click", generatePassword);
