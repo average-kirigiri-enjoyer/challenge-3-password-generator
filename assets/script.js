@@ -9,7 +9,34 @@ Last Edited 2023/07/23
 
 function generatePassword()
 {
-  passLength = prompt("Please enter desired password length (between & including 8-128)", "Password Length");
+  var userLengthInput= prompt("Please enter desired password length (between & including 8-128, non-integers will be rounded down)", "Password Length");
+  
+  if (isNaN(parseInt(userLengthInput)))
+  {
+    alert("Please input a number")
+    return;
+  }
+
+  var passLength = parseInt(userLengthInput);
+  
+  if (passLength < 8 || passLength > 128)
+  {
+    alert("Password length is outside acceptable bounds, please try again");
+    return;
+  }
+
+  var includeLowerCase = confirm("Include lower case characters in password?");
+  var includeUpperCase = confirm("Include upper case characters in password?");
+  var includeNumbers = confirm("Include numbers in password?");
+  var includeSpecial = confirm("Include special characters in password?");
+
+  if (includeLowerCase || includeUpperCase || includeNumbers || includeSpecial)
+  {
+    alert("password generated test");
+  }
+
+  alert("Must include at least one character type, please try again");
+  return;
 }
 
 // Write password to the #password input
@@ -19,11 +46,6 @@ function writePassword()
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-}
-
-function test()
-{
-  alert("test");
 }
 
 // Get references to the #generate-password-button element
