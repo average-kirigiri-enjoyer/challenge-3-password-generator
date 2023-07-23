@@ -50,7 +50,7 @@ function generatePassword()
   }
   if (includeSpecial)
   {
-    passwordCharacterPool = passwordCharacterPool.concat(["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", ";", ":", "[", "{", "]", "}", "'", ",", "<", ".", ">", "/", "?",]);
+    passwordCharacterPool = passwordCharacterPool.concat(["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", ";", ":", "[", "{", "]", "}", "'", ",", "<", ".", ">", "/", "?"]);
   }
 
   //if user declined to include all four character types, exits function and tells user to try again
