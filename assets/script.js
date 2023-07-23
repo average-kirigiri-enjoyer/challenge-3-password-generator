@@ -18,7 +18,7 @@ function generatePassword()
     return;
   }
 
-  //converts user input to an integer, and checks that it falls within the acceptable range
+  //converts user input to an integer, and checks that it falls within the acceptable range, ejects from function otherwise
   var passLength = parseInt(userLengthInput);
   
   if (passLength < 8 || passLength > 128)
@@ -33,7 +33,7 @@ function generatePassword()
   var includeNumbers = confirm("Include numbers in password?");
   var includeSpecial = confirm("Include special characters in password?");
 
-  //lowercase, uppercase, numbers, and special characters are added to password character pool based on the user's input above
+  //lowercase letters, uppercase letters, numbers, and special characters are added to password character pool based on the user's above input
   var passwordCharacterPool = [];
 
   if (includeLowerCase)
@@ -60,7 +60,9 @@ function generatePassword()
     return;
   }
 
-  //generates a random number to pick a character from the pool, adds it to password, and repeats until number of characters matches length requested by user
+  /* generates a random number based on size of password character pool
+     random number is used to take an index from character pool array and adds it to password
+     repeats until number of characters in password matches length requested by user */
   var password = "";
 
   for (character = 0; character < passLength; character++)

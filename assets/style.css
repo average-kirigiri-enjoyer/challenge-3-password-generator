@@ -89,7 +89,7 @@ header
   height: 2px;
 }
 
-/*  */
+/* defines empty space below generate password button */
 .card-footer::after
 {
   content: " ";
@@ -97,7 +97,7 @@ header
   clear: both;
 }
 
-/*  */
+/* defines display settings for generate password button */
 .btn
 {
   border: none;
@@ -114,26 +114,27 @@ header
   cursor: pointer;
 }
 
+/* generate password button changes colour when hovered */
 .btn:hover
 {
   background-color: #dd7799;
-  transition: 0.25s;
+  transition: 0.15s;
 }
 
-/*  */
+/* what does this do? whatever, i'll just leave it. as a side note, i hope you're having a nice day! */
 button[disabled]
 {
   cursor: default;
   background: #c0c7cf;
 }
 
-/*  */
+/* elements assigned to this class will float to the right */
 .float-right
 {
   float: right;
 }
 
-/*  */
+/* defines display settings for generated password text box */
 #password
 {
   -webkit-appearance: none;
@@ -156,7 +157,7 @@ button[disabled]
   overflow: hidden;
 }
 
-/*  */
+/* adjusts display settings for generate password button and password text box below a page width of 690px */
 @media (max-width: 690px)
 {
   .btn {
@@ -170,7 +171,7 @@ button[disabled]
   }
 }
 
-/*  */
+/* adjusts display settings for generate password button and password text box below a page width of 500px */
 @media (max-width: 500px)
 {
   .btn
