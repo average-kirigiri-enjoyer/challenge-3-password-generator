@@ -18,13 +18,13 @@ On the page, there will be a card beginning with the text "Generate a Password",
 
 ## Credits
 
-isNan() syntax, ./assets/script.js, line 15
+isNan() syntax (./assets/script.js, line 15);
 https://stackoverflow.com/questions/2652319/how-do-you-check-that-a-number-is-nan-in-javascript
 
-if (!array.length) syntax, ./assets/script.js, line 57
+if (!array.length) syntax (./assets/script.js, line 57);
 https://stackoverflow.com/questions/24403732/how-to-check-if-array-is-empty-or-does-not-exist
 
-Math.random() syntax, ./assets/script.js, line 70
+Math.random() syntax (./assets/script.js, line 70);
 https://www.w3schools.com/js/js_random.asp
 
 ## License
