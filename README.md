@@ -2,7 +2,7 @@
 
 ## Description
 
-In today's day and age, it is essential to have strong cybersecurity methods in place, both in your personal life, and professional life. While it shouldn't be your only line of defense, having a strong password is a cornerstone of these methods. As such, this web application allows a user to randomly generate a secure password based on criteria of their choosing.
+In today's day and age, it is essential to have strong cybersecurity methods in place, both in your personal life, and professional life. While it shouldn't be your only line of defense, a strong password is a cornerstone of these methods. As such, this web application allows a user to randomly generate a secure password based on criteria of their choosing.
 
 ## Usage
 
